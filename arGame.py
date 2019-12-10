@@ -62,7 +62,7 @@ prevdir = 0
 # deal with the accelaration
 dvelocity = 0
 
-# change the "phenotype" of jianzi if necessary
+# change the "phenotype" of the character if necessary
 changeMode = 0
 
 # set a timer for danmaku
@@ -121,11 +121,21 @@ while True:
         # check if tracking succeed
         if success:
             (x, y, w, h) = [int(v) for v in box]
-            # Game over
+            
+            #"The story ultimately refuses to
+            # make a home (or house, in 
+            # Benjamin’s terms) in cultural
+            # forms, emphasizing instead 
+            # the movement of the narrative
+            # itself" (Harkins). 
+            # This quote is from an analysis
+            # of "Aye, and Gomorrah.”
+            # It resonates with the ending
+            # of World of Wakanda.
             if circleY > 600:
                 break
             
-            #when the tracked zone hits the jianzi
+            #when in the tracked zone
             if circleX > x and circleX < x + w and circleY > y and circleY < y + h: 
                 #determine the direction and reset the acceleration.
                 if (circleX - x) < (x + w - circleX):
@@ -301,8 +311,16 @@ while True:
                 cv2.line(frame, (760, 55), (780, 75), (0, 0, 0), 8)
                 cv2.line(frame, (725, 120), (775, 120), (0, 0, 0), 8)
 
+            # Even when workers all share the same complexion,
+            #  thereby eliminating a construction of racial 
+            #  difference according to phenotype, Max is able
+            #  to divide his working-class employees along
+            #  racial lines by reproducing blackness as an
+            #  invisible threat. (Retman)
+
             if xTimer == 1200:
                 xTimer = 200
+            
             #update xTimer
             xTimer += 1
             #update right boss's timer
@@ -311,7 +329,7 @@ while True:
             # draw the "feet"
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-            # What a jianzi looks like when not hitting boundaries
+            # What the character looks like when not hitting boundaries
             cv2.circle(frame, (circleX,circleY), 5, (255, 0, 0), 10)
             cv2.rectangle(frame, (circleX - 5, circleY - 35), (circleX + 5, circleY), (0, 0, 255), 10)
             cv2.rectangle(frame, (circleX - 7, circleY - 50), (circleX - 5, circleY - 35), (0, 255, 255), 2)
@@ -323,8 +341,17 @@ while True:
             cv2.circle(frame, (circleX, circleY - 17), 3, (0, 0, 255), 6)
             cv2.line(frame, (circleX - 8, circleY - 15), (circleX - 38, circleY - 35), (0,125,125), 3)
             cv2.line(frame, (circleX + 8, circleY - 15), (circleX + 38, circleY - 35), (0,125,125), 3)
-            
-            # where the appearance of jianzi changes randomly
+
+            #…by no means does Schuyler naively portray
+            #  the particularization or “making strange”
+            #  of whiteness as an act that is fully 
+            #  liberatory or revolutionary in and of itself.
+            #  More specifically, Schuyler, through a
+            #  satirical representation of 1930s America, 
+            #  highlights both whiteness’s performative 
+            #  reliance on the existence of blackness, and
+            #  the non-essential nature of the connection
+            #  between economic privileges and whiteness (Haslam)  
             if (changeMode == 1):
                 # change it back
                 changeMode = 0
@@ -379,7 +406,12 @@ while True:
                 dvelocity = 0
             changeMode = 1
 
-        # Game over
+        #The story ultimately refuses to
+            #  make a home (or house, in 
+            # Benjamin’s terms) in cultural
+            #  forms, emphasizing instead 
+            # the movement of the narrative
+            #  itself (Harkins). 
         if circleY > 600:
             break
         # hit the upper bound
@@ -540,6 +572,13 @@ while True:
             cv2.line(frame, (760, 55), (780, 75), (0, 0, 0), 8)
             cv2.line(frame, (725, 120), (775, 120), (0, 0, 0), 8)
 
+        # Even when workers all share the same complexion,
+        #  thereby eliminating a construction of racial 
+        #  difference according to phenotype, Max is able
+        #  to divide his working-class employees along
+        #  racial lines by reproducing blackness as an
+        #  invisible threat. –race and capitalism (Retman)
+
         if xTimer == 1200:
             xTimer = 200
         #update xTimer
@@ -547,7 +586,7 @@ while True:
         #update right boss's timer
         dRight += 1
 
-        # What a jianzi looks like when not hitting boundaries
+        # What a the character looks like when not hitting boundaries
         cv2.circle(frame, (circleX,circleY), 5, (255, 0, 0), 10)
         cv2.rectangle(frame, (circleX - 5, circleY - 35), (circleX + 5, circleY), (0, 0, 255), 10)
         cv2.rectangle(frame, (circleX - 7, circleY - 50), (circleX - 5, circleY - 35), (0, 255, 255), 2)
@@ -560,7 +599,16 @@ while True:
         cv2.line(frame, (circleX - 8, circleY - 15), (circleX - 38, circleY - 35), (0,125,125), 3)
         cv2.line(frame, (circleX + 8, circleY - 15), (circleX + 38, circleY - 35), (0,125,125), 3)
         
-        # where the appearance of jianzi changes randomly
+        #…by no means does Schuyler naively portray
+            #  the particularization or “making strange”
+            #  of whiteness as an act that is fully 
+            #  liberatory or  revolutionary in and of itself.
+            #  More specifically, Schuyler, through a
+            #  satirical representation of 1930s America, 
+            #  highlights both whiteness’s performative 
+            #  reliance on the existence of blackness, and
+            #  the non-essential nature of the connection
+            #  between economic privileges and whiteness (Haslam)
         if (changeMode == 1):
             # change it back
             changeMode = 0
@@ -604,9 +652,28 @@ while True:
 
     key = cv2.waitKey(1) & 0xFF
 
+    # Frame can be:
+    # (Before the civil war) “Not only were capitalism and
+    # slavery intertwined, but North and South were deeply
+    # interdependent: People and regions of the North were
+    # economically and morally complicit in the slave
+    # system." (Clark)
+    # (1930s) "black feeling could be traded as a cultural 
+    # commodity in a new market" ("Mod ern Tones" 104). This
+    # transaction depended on the construction of blackness
+    # through visual and discursive narrative (Retman).
+
     # if 's', select a bounding box to track
     if key == ord("s"):
-        # select the box of object you want to track, then press ENTER / SPACE
+        # …racial and economic oppression 
+        # create a mutually fulfilling 
+        # and self-perpetuating social 
+        # dynamic. Thus, Schuyler seems 
+        # to say that an attack on only 
+        # one of these subjects – whiteness,
+        # for example – cannot succeed 
+        # on its own (Haslam).
+
         initBB = cv2.selectROI("Frame", frame, fromCenter=False,
                                 showCrosshair=True)
         # start opencv object tracker with supplied box coordinates
