@@ -1,4 +1,11 @@
 # AAST_FINAL
+# How to play
+  enter the virtual environment;\
+  run "python arGame.py" on command line;\
+  press "s" to select a frame;\
+  or, press "z" to use contour tracking. e.g. put your right hand to cover the nine triangles.
+
+# Useful links
 Videoio module: https://docs.opencv.org/master/df/d2c/tutorial_table_of_content_videoio.html
 
 Meanshift and Camshift for tracking object in video: https://docs.opencv.org/master/d7/d00/tutorial_meanshift.html
@@ -9,9 +16,8 @@ Background subtraction for generating foreground mask: https://docs.opencv.org/m
 
 Contours Features: https://docs.opencv.org/3.4/dd/d49/tutorial_py_contour_features.html
 Hierarchy: https://docs.opencv.org/3.4/d9/d8b/tutorial_py_contours_hierarchy.html
-Tracking
 
-Finger detection: http://www.benmeline.com/finger-tracking-with-opencv-and-python/
+Tracking Finger detection: http://www.benmeline.com/finger-tracking-with-opencv-and-python/
 
 Back projection: https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/back_projection/back_projection.html
 
