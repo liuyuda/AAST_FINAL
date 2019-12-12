@@ -3,7 +3,7 @@
   enter the virtual environment;\
   run "python arGame.py" on command line;\
   press "s" to select a frame;\
-  or, press "z" to use contour tracking. e.g. put your right hand to cover the nine triangles.
+  or, press "z" to use contour tracking. e.g. put your right hand to cover all the nine triangles.
 
 # Useful links
 Videoio module: https://docs.opencv.org/master/df/d2c/tutorial_table_of_content_videoio.html
